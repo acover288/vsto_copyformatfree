@@ -12,7 +12,7 @@ A outlook extension to copy the current email free of html tags.
 
 ## Install
 
-Download setup.zip
+Download [setup.zip](/setup.zip)
 
 Unzip setup.zip
 
