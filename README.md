@@ -17,7 +17,7 @@ Unzip setup.zip
 Run setup.exe
 
 A new button should appear in outlook
-![Button Screenshot](/screenshot.png)
+![Button Screenshot](/screenshot.PNG)
 
 ## Usage
 
