@@ -12,15 +12,18 @@ A outlook extension to copy the current email free of html tags.
 
 ## Install
 
-Download setup.zip
-Unzip setup.zip
-Run setup.exe
+1. Download [setup.zip](/setup.zip)
 
-A new button should appear in outlook
-![Button Screenshot](/screenshot.png)
+1. Unzip setup.zip
+
+1. Run setup.exe
+
+1. A new button should appear in outlook
+![Button Screenshot](/screenshot.PNG)
 
 ## Usage
 
-Click the button and the current email is copied into your clipboard.
+Two methods:
 
-Alternatively use the keyboard shortcut - press Alt then H then B.
+* Using the mouse - click the button "Copy Format Free"
+* Using the keyboard - press Alt then H then B
