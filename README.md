@@ -13,8 +13,11 @@ A outlook extension to copy the current email free of html tags.
 ## Install
 
 Download setup.zip
+
 Unzip setup.zip
+
 Run setup.exe
+
 
 A new button should appear in outlook
 ![Button Screenshot](/screenshot.PNG)
