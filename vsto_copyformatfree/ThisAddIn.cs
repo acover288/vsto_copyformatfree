@@ -44,7 +44,7 @@ namespace vsto_copyformatfree
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Andrew error:" + ex);
+                // Log errors ?
             }
         }
 
