@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
-using System.Windows.Forms;
 using Clipboard = System.Windows.Forms.Clipboard;
 using Outlook = Microsoft.Office.Interop.Outlook;
-using HtmlDocument = HtmlAgilityPack.HtmlDocument;
-using System.Collections.Generic;
-using HtmlAgilityPack;
 
 namespace vsto_copyformatfree
 {
