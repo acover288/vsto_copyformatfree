@@ -3,6 +3,9 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Clipboard = System.Windows.Forms.Clipboard;
 using Outlook = Microsoft.Office.Interop.Outlook;
+using HtmlDocument = HtmlAgilityPack.HtmlDocument;
+using System.Collections.Generic;
+using HtmlAgilityPack;
 
 namespace vsto_copyformatfree
 {
@@ -12,11 +15,13 @@ namespace vsto_copyformatfree
         {
         }
 
+        public static string filterBody(string text)
+        {
+            return Regex.Replace(text, "(\r?\n){2,}", "\r\n");
+        }
+
         public void click()
         {
-            Outlook.MAPIFolder selectedFolder =
-                this.Application.ActiveExplorer().CurrentFolder;
-
             try
             {
                 if (this.Application.ActiveExplorer().Selection.Count > 0)
@@ -26,13 +31,12 @@ namespace vsto_copyformatfree
                     {
                         Outlook.MailItem mailItem =
                             (selObject as Outlook.MailItem);
-                        string strippedBody = Regex.Replace(mailItem.Body, "<.*?>", String.Empty);
                         string copyText = string.Format("To: {0}\nFrom: {1}\nDate: {2}\nSubject: {3}\nBody: {4}",
                             mailItem.To,
                             mailItem.Sender.Address,
                             mailItem.ReceivedTime,
                             mailItem.Subject,
-                            strippedBody);
+                            ThisAddIn.filterBody(mailItem.Body));
 
                         Clipboard.SetDataObject(copyText);
                     }
